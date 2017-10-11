@@ -52,6 +52,8 @@ Route::group(['middleware' => 'web'], function () {
      * 刪除任務
      */
     Route::delete('/task/{task}', function (Task $task) {
-        //
+        $task->delete();
+        
+            return redirect('/');
     });
 });
